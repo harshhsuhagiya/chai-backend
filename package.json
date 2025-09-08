@@ -2,14 +2,19 @@
   "name": "chai-backend",
   "version": "1.0.0",
   "description": "a backend at chai aur code channel - youtube",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/indec.js"
   },
   "keywords": [
     "backend",
     "chai"
   ],
   "author": "harsh suhagiya",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "D": "^1.0.0",
+    "nodemon": "^3.1.10"
+  }
 }
