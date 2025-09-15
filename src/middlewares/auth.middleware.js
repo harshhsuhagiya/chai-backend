@@ -11,7 +11,7 @@ export const verifyJWT = asyncHandler(async(req,res,next)=>{
                 return new ApiError(401,"Unauthorized, Access token is missing");
             }
     
-            const decodeToken=jwt.verify(token,process.env.ACCESS_TOKEN_SECRET)
+            const decodedToken=jwt.verify(token,process.env.ACCESS_TOKEN_SECRET)
     
             const user=await User.findById(decodedToken?._id).select(" -password -refreshTokens")
             
