@@ -16,6 +16,7 @@ app.use(cros({
 app.use(express.json({limit:"16kb"}));
 app.use(express.urlencoded({extended:true,limit:"16kb"}));
 app.use(express.static("public"));
+//curd opration perform in cookie
 app.use(cookieParser());
 
 //routes import
