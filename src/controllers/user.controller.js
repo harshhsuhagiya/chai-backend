@@ -352,7 +352,7 @@ const upadateUsercoverImages = asyncHandler(async (req, res) => {
 })
 
 const getUserChannelProfile = asyncHandler(async (req, res) => {
-    const { usename } = req.params
+    const { username } = req.params
 
     if (!username?.trim()) {
         throw new ApiError(400, "username is missing")
@@ -459,7 +459,7 @@ const getWatchHistory = asyncHandler(async (req,res)=>{
                     {
                         $addFields:{
                             owner:{
-                                $frist : "$owner"
+                                $first : "$owner"
                             }
                         }
                     }
